@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {ProductLine} from "./components/ProductLine";
+import {PRODUCTS_DATA} from "./data/Data";
 
 function App() {
-  return (
-      <header className="App-header">
-        <div id="root">
-          <div>
+    return (
+        <div>
             <h1>Menu</h1>
-            <div>cola</div>
-            <div>water</div>
-            <div>bier</div>
-            <div>wijn</div>
-          </div>
+            <ProductLine product={PRODUCTS_DATA[0]} />
+            <ProductLine product={PRODUCTS_DATA[1]} />
+            <ProductLine product={PRODUCTS_DATA[2]} />
+            <ProductLine product={PRODUCTS_DATA[3]} />
         </div>
-      </header>
-
-  );
+    );
 }
+
 
 export default App;
