@@ -1,16 +1,15 @@
 import './App.css';
 import {ProductLine} from "./components/ProductLine";
-import {PRODUCTS_DATA} from "./data/Data";
+import {CATEGORIES_DATA, PRODUCTS_DATA} from "./data/Data";
+import {Category} from "./components/Category";
 
 function App() {
     return (
         <div>
             <h1>Menu</h1>
-            <ProductLine product={PRODUCTS_DATA[0]} />
-            <ProductLine product={PRODUCTS_DATA[1]} />
-            <ProductLine product={PRODUCTS_DATA[2]} />
-            <ProductLine product={PRODUCTS_DATA[3]} />
+            {CATEGORIES_DATA.map(c => <Category category={c} key={c.name} />)}
         </div>
+
     );
 }
 
