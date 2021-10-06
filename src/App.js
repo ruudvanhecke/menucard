@@ -1,6 +1,5 @@
 import './App.css';
-import {ProductLine} from "./components/ProductLine";
-import {CATEGORIES_DATA, PRODUCTS_DATA} from "./data/Data";
+import {CATEGORIES_DATA} from "./data/Data";
 import {Category} from "./components/Category";
 
 function App() {
