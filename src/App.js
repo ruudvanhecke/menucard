@@ -1,15 +1,20 @@
+import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {CATEGORIES_DATA} from "./data/Data";
-import {Category} from "./components/Category";
+import {MenuNavBar} from "./components/MenuNavBar";
+import {MenuCard} from "./components/MenuCard";
+import {Container} from "react-bootstrap";
+
 
 function App() {
-    return (
-        <div>
-            <h1>Menu</h1>
-            {CATEGORIES_DATA.map(c => <Category category={c} key={c.name} />)}
-        </div>
 
-    );
+    return <Container fluid className="p-0 p-md-3 p-lg-5">
+            <MenuNavBar/>
+            <MenuCard menuData={CATEGORIES_DATA}/>
+            </Container>
+
+
 }
 
 
