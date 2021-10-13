@@ -13,6 +13,6 @@ export function ProductLine(props) {
             <ProductNote product={product} />
             <div className="note">{product.note}</div>
         </div>
-        <div>{product.price}</div>
+        <div className="d-flex flex-row-reverse">{product.price}€</div>
     </div>
 }
